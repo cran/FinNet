@@ -4,16 +4,12 @@
 #'
 #' @name Matrix&matrix
 #' @importFrom methods new
-#'
+#' @importClassesFrom Matrix Matrix denseMatrix sparseMatrix generalMatrix compMatrix triangularMatrix
 #' @keywords internal
 
-if(requireNamespace('Matrix', quietly = TRUE)){
-  requireNamespace('Matrix')
-} else {
-  setClass('Matrix', prototype = matrix())
-}
+setClassUnion(name = 'Matrix&matrix',
+              members =  c('matrix', 'Matrix'))
 
-setClassUnion('Matrix&matrix', c('matrix', 'Matrix'))
 
 #' An S4 class for the adjacency matrix produced by \code{\link{FF}} and related functions to represent the relations between firms (legal person)
 #'
@@ -27,6 +23,7 @@ setClassUnion('Matrix&matrix', c('matrix', 'Matrix'))
 #'
 #' @name financial_matrix
 #' @importFrom methods new
+#' @importClassesFrom Matrix Matrix denseMatrix sparseMatrix generalMatrix compMatrix triangularMatrix
 #'
 #' @keywords internal
 
