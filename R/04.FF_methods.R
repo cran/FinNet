@@ -111,7 +111,7 @@ setMethod(f = 'show', signature = 'financial_matrix',
 #'
 #' Un-exported function behind the \code{as.firm} method for objects of class \code{financial_matrix}
 #'
-#' @param FF The object of class \code{financial_matrix} to be coerced
+#' @param x The object of class \code{financial_matrix} to be coerced
 #' @param ... Optional argument to the method
 #'
 #' @returns A (usually named) list of \code{firm} objects the length of which equals the number of rows and columns of the provided \code{financial_matrix}

@@ -4,7 +4,7 @@
 \alias{listing}
 \title{Function to list multiple objects passed as \code{...}}
 \usage{
-listing(...)
+listing(..., naming = TRUE)
 }
 \arguments{
 \item{...}{Objects on which to operate}

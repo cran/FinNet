@@ -89,9 +89,11 @@ naming <- function(...){
 #'
 #' @keywords internal
 
-listing <- function(...){
+listing <- function(..., naming = TRUE){
   y <- list(...)
-  names(y) <- naming(...)
+  if(naming){
+    names(y) <- naming(...)
+  }
   y
 }
 

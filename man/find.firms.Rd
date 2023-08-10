@@ -61,9 +61,8 @@ This function requires the package \code{yahoofinancer} to be installed. It is a
 }
 \examples{
 # Registering Apple, General Motors, and British American Tobacco automatically
-firms_US <- find.firms(tickers = c('AAPL', 'GM', 'BTI'),
-                       name = c('Apple', 'General Motors', 'British American Tobacco'),
-                       legal_form = 'Inc')
+#| Results are subject to the correct functioning of the package `yahoofinancer`
+#| and of the Yahoo! Finance API
 
 }
 \seealso{

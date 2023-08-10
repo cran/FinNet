@@ -40,17 +40,19 @@ This vignette illustrates how to:
 
 # 1. Data retrieval
 
-After having identified the firms of interest, the package can fetch all information on them as long as `yahoofinancer` is available. So:
+After having identified the firms of interest, the package can fetch all information on them as long as `yahoofinancer` is available. Otherwise, built-in data can be used:
 
 ```{r workflow_1, echo=TRUE}
 # Check if `yahoofinancer` is installed
 isTRUE(requireNamespace('yahoofinancer', quietly = TRUE))
 
 # Create a list of the desired firms
-# Note: if `SPB` is installed, a progress bar will appear
-firms <- find.firms(tickers = c('TM', 'GM', 'F', 'HMC'),
-                    name = c('Toyota', 'General Motors',
-                             'Ford', 'Honda'))
+data('firms_US')
+```
+
+```{r clean, echo=FALSE, include=FALSE}
+firms <- firms_US
+rm(firms_US)
 ```
 
 # 2. Matrix construction

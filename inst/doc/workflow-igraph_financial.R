@@ -16,10 +16,11 @@ library(markdown)
 isTRUE(requireNamespace('yahoofinancer', quietly = TRUE))
 
 # Create a list of the desired firms
-# Note: if `SPB` is installed, a progress bar will appear
-firms <- find.firms(tickers = c('TM', 'GM', 'F', 'HMC'),
-                    name = c('Toyota', 'General Motors',
-                             'Ford', 'Honda'))
+data('firms_US')
+
+## ----clean, echo=FALSE, include=FALSE-----------------------------------------
+firms <- firms_US
+rm(firms_US)
 
 ## ----workflow_3, echo=TRUE----------------------------------------------------
 # Identify common-ownership relations in a firm-firm matrix

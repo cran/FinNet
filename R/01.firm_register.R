@@ -142,7 +142,9 @@ register.firm <- function(name, id = NA, legal_form = NA,
 #'
 #' @examples
 #' # Registering Apple automatically
-#' AAPL <- find.firm(ticker = 'AAPL', name = 'Apple', legal_form = 'Inc')
+#' #| Results are subject to the correct functioning of the package `yahoofinancer`
+#' #| and of the Yahoo! Finance API
+#  AAPL <- find.firm(ticker = 'AAPL', name = 'Apple', legal_form = 'Inc')
 #'
 #' @seealso \link{register.firm} \link{find.firms}
 #'
@@ -165,8 +167,7 @@ find.firm <- function(ticker, name = NULL, ticker_is_id = TRUE,
   }
 
   x <- yahoofinancer::Ticker$new(ticker)
-
-  register.firm(
+  tryCatch(register.firm(
     name = ifelse(is.null(name), ticker, name),
     id = ifelse(ticker_is_id, ticker, as.character(NA)),
     sector = ifelse(sector_granularity %in% c(0, NA, NULL), NA,
@@ -196,7 +197,8 @@ find.firm <- function(ticker, name = NULL, ticker_is_id = TRUE,
                       x$price$currency,
                       x$financial_data$financialCurrency)
 
-  )
+  ), error = function(e)NA)
+
 }
 
 #' Function to create mutiple \code{firms} (legal persons) using data from 'Yahoo! Finance'
@@ -241,9 +243,11 @@ find.firm <- function(ticker, name = NULL, ticker_is_id = TRUE,
 #'
 #' @examples
 #' # Registering Apple, General Motors, and British American Tobacco automatically
-#' firms_US <- find.firms(tickers = c('AAPL', 'GM', 'BTI'),
-#'                        name = c('Apple', 'General Motors', 'British American Tobacco'),
-#'                        legal_form = 'Inc')
+#' #| Results are subject to the correct functioning of the package `yahoofinancer`
+#' #| and of the Yahoo! Finance API
+#  firms_US <- find.firms(tickers = c('AAPL', 'GM', 'BTI'),
+#                         name = c('Apple', 'General Motors', 'British American Tobacco'),
+#                         legal_form = 'Inc')
 #'
 #' @seealso \link{find.firm}
 #'
@@ -321,8 +325,7 @@ find.firms <- function(tickers, name = NULL, ticker_is_id = TRUE,
       stop(call. = FALSE, paste('Not a valid ticker:', ticker))
     }
 
-
-    register.firm(
+    tryCatch(register.firm(
       name = ifelse(is.null(name[i]), ticker, name[i]),
       id = ifelse(ticker_is_id, ticker, as.character(NA)),
       sector = ifelse(sector_granularity %in% c(0, NA, NULL), NA,
@@ -355,7 +358,7 @@ find.firms <- function(tickers, name = NULL, ticker_is_id = TRUE,
                         x$price$currency,
                         x$financial_data$financialCurrency)
 
-    )
+    ), error = function(e)NA)
   })
 
   if(!requireNamespace("SPB", quietly = TRUE)){

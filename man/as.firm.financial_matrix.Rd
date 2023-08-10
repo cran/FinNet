@@ -7,9 +7,9 @@
 as.firm.financial_matrix(x, ...)
 }
 \arguments{
-\item{...}{Optional argument to the method}
+\item{x}{The object of class \code{financial_matrix} to be coerced}
 
-\item{FF}{The object of class \code{financial_matrix} to be coerced}
+\item{...}{Optional argument to the method}
 }
 \value{
 A (usually named) list of \code{firm} objects the length of which equals the number of rows and columns of the provided \code{financial_matrix}
