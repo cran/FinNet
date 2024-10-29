@@ -13,7 +13,7 @@ get.net(
   format = c("igraph", "network"),
   directed = TRUE,
   loops = FALSE,
-  weighted = any(x@M \%in\% c(0, 1)),
+  weighted = any(!x@M \%in\% c(0, 1)),
   ...
 )
 }

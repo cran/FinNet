@@ -26,7 +26,7 @@
 \item{x}{The \code{igraph_financial} object}
 }
 \value{
-The same result for both \code{igraph} and {igraph_financial} objects
+The same result for both \code{igraph} and \code{igraph_financial} objects
 \itemize{
  \item \code{V}: A vertex sequence containing all vertices, in the order of their numeric vertex ids
  \item \code{vcount} and \code{gorder}: Number of vertices, numeric scalar

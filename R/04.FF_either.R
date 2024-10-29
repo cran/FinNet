@@ -34,7 +34,9 @@
 #'
 #' @author \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 #'
-#' @seealso \link{FF} \link{FF.binary.ownership} \link{FF.binary.management} \link{FF.naive.ownership} \link{FF.naive.management} \link{FF.norm.ownership} \link{FF.norm.management}
+#' @family Internal matrix (de)constructrs
+#'
+#' @seealso \link{FF}
 #'
 #' @keywords internal
 
@@ -61,7 +63,12 @@ get.matrix.adjacency <- function(..., who = c('managers', 'owners'),
 
   id_as_firm_name <- ifelse(id_as_firm_name, 'id', 'names')
 
+  who <-
+    (match.arg(arg = who, choices = c('managers', 'owners'))=='managers')|>
+    ifelse(test =  _, yes = 'management', no = 'ownership')
+  rows <- query.firms(firms, which = who)
   cols <- find.people(firms, who = substr(who, 1, 3), sorting = TRUE)
+
 
   Matrix <- ifelse(!is.null.na(Matrix),
                    yes = Matrix,
@@ -70,11 +77,6 @@ get.matrix.adjacency <- function(..., who = c('managers', 'owners'),
                                yes = TRUE, no = FALSE))
 
   if(Matrix)requireNamespace('Matrix', quietly = TRUE)
-
-  who <-
-    (match.arg(arg = who, choices = c('managers', 'owners'))=='managers')|>
-    ifelse(test =  _, yes = 'management', no = 'ownership')
-  rows <- query.firms(firms, which = who)
 
   if(as.numeric(ties)|> suppressWarnings()|> is.na()){
     ties <- switch(ties,
@@ -164,7 +166,8 @@ get.matrix.adjacency <- function(..., who = c('managers', 'owners'),
 #' data('firms_BKB')
 #' FF <- FF.binary.ownership(firms_BKB)
 #'
-#' @seealso \link{FF} \link{FF.binary.management} \link{FF.naive.ownership} \link{FF.naive.management} \link{FF.norm.ownership} \link{FF.norm.management}
+#'
+#' @family Financial_matrix builders
 #'
 #' @export
 
@@ -197,6 +200,8 @@ FF.binary.ownership <- function(..., id_as_firm_name = NULL,
 #'
 #' @return A matrix object of class \code{financial_matrix}(possibly using the \href{https://cran.r-project.org/package=Matrix}{\code{Matrix} package})
 #'
+#' @family Financial_matrix builders
+#'
 #' @author \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 #'
 #' @examples
@@ -205,7 +210,6 @@ FF.binary.ownership <- function(..., id_as_firm_name = NULL,
 #' data('firms_BKB')
 #' FF <- FF.binary.management(firms_BKB)
 #'
-#' @seealso \link{FF} \link{FF.binary.ownership} \link{FF.naive.ownership} \link{FF.naive.management} \link{FF.norm.ownership} \link{FF.norm.management}
 #'
 #' @export
 FF.binary.management <- function(..., id_as_firm_name = NULL,
@@ -238,6 +242,8 @@ FF.binary.management <- function(..., id_as_firm_name = NULL,
 #'
 #' @return A matrix object of class \code{financial_matrix}(possibly using the \href{https://cran.r-project.org/package=Matrix}{\code{Matrix} package})
 #'
+#' @family Financial_matrix builders
+#'
 #' @author \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 #'
 #' @examples
@@ -245,8 +251,6 @@ FF.binary.management <- function(..., id_as_firm_name = NULL,
 #' # Create the naive FF matrix of Berkshire Hathaway's holdings by common ownership
 #' data('firms_BKB')
 #' FF <- FF.naive.ownership(firms_BKB)
-#'
-#' @seealso \link{FF} \link{FF.binary.ownership} \link{FF.binary.management} \link{FF.naive.management} \link{FF.norm.ownership} \link{FF.norm.management}
 #'
 #' @export
 
@@ -280,6 +284,8 @@ FF.naive.ownership <- function(..., id_as_firm_name = NULL,
 #'
 #' @return A matrix object of class \code{financial_matrix}(possibly using the \href{https://cran.r-project.org/package=Matrix}{\code{Matrix} package})
 #'
+#' @family Financial_matrix builders
+#'
 #' @author \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 #'
 #' @examples
@@ -287,8 +293,6 @@ FF.naive.ownership <- function(..., id_as_firm_name = NULL,
 #' # Create the naive FF matrix of Berkshire Hathaway's holdings by boards interlocks
 #' data('firms_BKB')
 #' FF <- FF.naive.management(firms_BKB)
-#'
-#' @seealso \link{FF} \link{FF.binary.ownership} \link{FF.binary.management} \link{FF.naive.ownership} \link{FF.norm.ownership} \link{FF.norm.management}
 #'
 #' @export
 
@@ -322,6 +326,8 @@ FF.naive.management <- function(..., id_as_firm_name = NULL,
 #'
 #' @return A matrix object of class \code{financial_matrix}(possibly using the \href{https://cran.r-project.org/package=Matrix}{\code{Matrix} package})
 #'
+#' @family Financial_matrix builders
+#'
 #' @author \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 #'
 #' @examples
@@ -329,8 +335,6 @@ FF.naive.management <- function(..., id_as_firm_name = NULL,
 #' # Create the normalised FF matrix of Berkshire Hathaway's holdings by common ownership
 #' data('firms_BKB')
 #' FF <- FF.norm.ownership(firms_BKB)
-#'
-#' @seealso \link{FF} \link{FF.binary.ownership} \link{FF.binary.management} \link{FF.naive.ownership} \link{FF.naive.management} \link{FF.norm.management}
 #'
 #' @export
 
@@ -364,6 +368,8 @@ FF.norm.ownership <- function(..., id_as_firm_name = NULL,
 #'
 #' @return A matrix object of class \code{financial_matrix}(possibly using the \href{https://cran.r-project.org/package=Matrix}{\code{Matrix} package})
 #'
+#' @family Financial_matrix builders
+#'
 #' @author \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 #'
 #' @examples
@@ -371,8 +377,6 @@ FF.norm.ownership <- function(..., id_as_firm_name = NULL,
 #' # Create the normalised FF matrix of Berkshire Hathaway's holdings by boards interlocks
 #' data('firms_BKB')
 #' FF <- FF.norm.management(firms_BKB)
-#'
-#' @seealso \link{FF} \link{FF.binary.ownership} \link{FF.binary.management} \link{FF.naive.ownership} \link{FF.naive.management} \link{FF.norm.ownership}
 #'
 #' @export
 
@@ -429,6 +433,8 @@ FF.norm.management <- function(..., id_as_firm_name = NULL,
 #'
 #' @return A matrix object of class \code{financial_matrix}(possibly using the \href{https://cran.r-project.org/package=Matrix}{\code{Matrix} package})
 #'
+#' @family Financial_matrix builders
+#'
 #' @author \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 #'
 #' @examples
@@ -436,8 +442,6 @@ FF.norm.management <- function(..., id_as_firm_name = NULL,
 #' # Create the normalised FF matrix of Berkshire Hathaway's holdings by boards interlocks
 #' data('firms_BKB')
 #' FF <- FF(firms_BKB, who = 'man', ties = 'share')
-#'
-#' @seealso \link{FF.binary.ownership} \link{FF.binary.management} \link{FF.naive.ownership} \link{FF.naive.management} \link{FF.norm.ownership} \link{FF.norm.management}
 #'
 #' @export
 

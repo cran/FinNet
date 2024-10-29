@@ -37,8 +37,18 @@ FF <- FF.naive.ownership(firms_BKB)
 
 }
 \seealso{
-\link{FF} \link{FF.binary.ownership} \link{FF.binary.management} \link{FF.naive.management} \link{FF.norm.ownership} \link{FF.norm.management}
+Other Financial_matrix builders: 
+\code{\link{FF}()},
+\code{\link{FF.binary.both}()},
+\code{\link{FF.binary.management}()},
+\code{\link{FF.binary.ownership}()},
+\code{\link{FF.naive.both}()},
+\code{\link{FF.naive.management}()},
+\code{\link{FF.norm.both}()},
+\code{\link{FF.norm.management}()},
+\code{\link{FF.norm.ownership}()}
 }
 \author{
 \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 }
+\concept{Financial_matrix builders}

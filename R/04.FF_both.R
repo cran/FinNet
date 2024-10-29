@@ -28,7 +28,9 @@
 #'
 #' @author \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 #'
-#' @seealso \link{FF} \link{FF.binary.both} \link{FF.naive.both} \link{FF.norm.both}
+#' @family Internal matrix (de)constructrs
+#'
+#' @seealso \link{FF}.
 #'
 #' @keywords internal
 
@@ -113,6 +115,8 @@ get.matrix.adjacency.both <- function(...,  ties = 3, id_as_firm_name = NULL,
 #'
 #' @return A matrix object of class \code{financial_matrix}(possibly using the \href{https://cran.r-project.org/package=Matrix}{\code{Matrix} package})
 #'
+#' @family Financial_matrix builders
+#'
 #' @author \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 #'
 #' @examples
@@ -121,7 +125,6 @@ get.matrix.adjacency.both <- function(...,  ties = 3, id_as_firm_name = NULL,
 #' data('firms_BKB')
 #' FF <- FF.binary.both(firms_BKB)
 #'
-#' @seealso \link{FF} \link{FF.naive.both} \link{FF.norm.both}
 #'
 #' @export
 
@@ -160,6 +163,8 @@ FF.binary.both <- function(..., id_as_firm_name = NULL,
 #'
 #' @return A matrix object of class \code{financial_matrix}(possibly using the \href{https://cran.r-project.org/package=Matrix}{\code{Matrix} package})
 #'
+#' @family Financial_matrix builders
+#'
 #' @author \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 #'
 #' @examples
@@ -167,8 +172,6 @@ FF.binary.both <- function(..., id_as_firm_name = NULL,
 #' # Create the complete naive firm-firm matrix for the companies held by Berkshire Hathaway
 #' data('firms_BKB')
 #' FF <- FF.naive.both(firms_BKB)
-#'
-#' @seealso \link{FF} \link{FF.binary.both} \link{FF.norm.both}
 #'
 #' @export
 
@@ -205,6 +208,8 @@ FF.naive.both <- function(..., id_as_firm_name = NULL,
 #'
 #' @return A matrix object of class \code{financial_matrix}(possibly using the \href{https://cran.r-project.org/package=Matrix}{\code{Matrix} package})
 #'
+#' @family Financial_matrix builders
+#'
 #' @author \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 #'
 #' @examples
@@ -213,7 +218,6 @@ FF.naive.both <- function(..., id_as_firm_name = NULL,
 #' data('firms_BKB')
 #' FF <- FF.norm.both(firms_BKB)
 #'
-#' @seealso \link{FF} \link{FF.binary.both} \link{FF.naive.both}
 #'
 #' @export
 

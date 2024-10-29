@@ -16,10 +16,10 @@
 \item{...}{Other parameters passed to the corresponding method and/or \code{igraph} functions (see Details).}
 }
 \value{
-For both \code{igraph} and {igraph_financial} objects, returns NULL invisibly. It is called to print the graph to any R device. (see method and \href{https://rdrr.io/cran/igraph/man/plot.igraph.html}{igraph::plot.igraph})
+For both \code{igraph} and \code{igraph_financial} objects, returns NULL invisibly. It is called to print the graph to any R device. (see method and \href{https://rdrr.io/cran/igraph/man/plot.igraph.html}{igraph::plot.igraph})
 }
 \description{
-Methods to extend code{igraph}'s plotting functions to \code{igraph_financial} objects
+Methods to extend \code{igraph}'s plotting functions to \code{igraph_financial} objects
 }
 \author{
 \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}

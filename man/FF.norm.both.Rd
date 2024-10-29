@@ -48,10 +48,21 @@ The ties' value will reflect the count of common owners and membership depending
 data('firms_BKB')
 FF <- FF.norm.both(firms_BKB)
 
+
 }
 \seealso{
-\link{FF} \link{FF.binary.both} \link{FF.naive.both}
+Other Financial_matrix builders: 
+\code{\link{FF}()},
+\code{\link{FF.binary.both}()},
+\code{\link{FF.binary.management}()},
+\code{\link{FF.binary.ownership}()},
+\code{\link{FF.naive.both}()},
+\code{\link{FF.naive.management}()},
+\code{\link{FF.naive.ownership}()},
+\code{\link{FF.norm.management}()},
+\code{\link{FF.norm.ownership}()}
 }
 \author{
 \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 }
+\concept{Financial_matrix builders}

@@ -116,7 +116,7 @@ get.net <- function(x, vertex.size = NULL, vertex.colour = NULL,
                     edge.width = NULL, edge.greyscale = NULL,
                     format = c('igraph', 'network'),
                     directed = TRUE, loops = FALSE,
-                    weighted = any(x@M%in%c(0, 1)),
+                    weighted = any(!x@M%in%c(0, 1)),
                     ...){
 
   M <- x@M
@@ -221,12 +221,13 @@ get.net <- function(x, vertex.size = NULL, vertex.colour = NULL,
 
   g <- switch(format,
               igraph = igraph::graph.adjacency(
-                adjmatrix = M, weighted = weighted, diag = loops,
+                adjmatrix = M, weighted = if(weighted){TRUE}else{NULL}, diag = loops,
                 mode = ifelse(directed, 'directed', 'undirected')
               ),
               network = network::network(
                 x = M, directed = directed, hyper = FALSE,
-                loops = loops, multiple = FALSE, bipartite = FALSE
+                loops = loops, multiple = FALSE, bipartite = FALSE,
+                ignore.eval = !weighted, names.eval = if(weighted){'weight'}else{NULL}
               ))|> methods::new(
                 Class = paste0(format,'_financial'),
                 data = _,
@@ -705,7 +706,8 @@ FF.graph <- function(x, aesthetic = c('simple', 'nice')){
 
   get.net(x, vertex.colour = NULL, edge.width = FALSE, format = 'igraph',
           directed = TRUE, vertex.size = vertex.size, loops = loops,
-          edge.greyscale = edge.greyscale, weighted = weighted)
+          edge.greyscale = edge.greyscale,
+          weighted = if(weighted){TRUE}else{NULL})
 
 }
 

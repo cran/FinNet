@@ -28,7 +28,7 @@
 \item{...}{Other parameters passed to the corresponding method and/or \code{igraph} functions (see Details).}
 }
 \value{
-The same result for both \code{igraph} and {igraph_financial} objects
+The same result for both \code{igraph} and \code{igraph_financial} objects
 \itemize{
  \item \code{E}: An edge sequence of the graph
  \item \code{ecount} and \code{gsize}: Number of edges, numeric scalar

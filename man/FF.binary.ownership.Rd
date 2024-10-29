@@ -32,10 +32,21 @@ Function to create a binary firm-firm (FF) matrix based on common ownership
 data('firms_BKB')
 FF <- FF.binary.ownership(firms_BKB)
 
+
 }
 \seealso{
-\link{FF} \link{FF.binary.management} \link{FF.naive.ownership} \link{FF.naive.management} \link{FF.norm.ownership} \link{FF.norm.management}
+Other Financial_matrix builders: 
+\code{\link{FF}()},
+\code{\link{FF.binary.both}()},
+\code{\link{FF.binary.management}()},
+\code{\link{FF.naive.both}()},
+\code{\link{FF.naive.management}()},
+\code{\link{FF.naive.ownership}()},
+\code{\link{FF.norm.both}()},
+\code{\link{FF.norm.management}()},
+\code{\link{FF.norm.ownership}()}
 }
 \author{
 \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 }
+\concept{Financial_matrix builders}

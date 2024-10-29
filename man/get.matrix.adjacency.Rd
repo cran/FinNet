@@ -54,9 +54,15 @@ The possible values of \code{ties} and their effect relative to the value of \co
 }
 }
 \seealso{
-\link{FF} \link{FF.binary.ownership} \link{FF.binary.management} \link{FF.naive.ownership} \link{FF.naive.management} \link{FF.norm.ownership} \link{FF.norm.management}
+\link{FF}
+
+Other Internal matrix (de)constructrs: 
+\code{\link{extract.matrix}()},
+\code{\link{get.matrix.adjacency.both}()},
+\code{\link{load.Matrix}()}
 }
 \author{
 \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 }
+\concept{Internal matrix (de)constructrs}
 \keyword{internal}

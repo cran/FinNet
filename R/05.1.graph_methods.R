@@ -95,19 +95,19 @@ setMethod(f = 'show', signature = 'igraph_financial',
 #' @description
 #' The following functions are implemented:
 #' \itemize{
-#'  \item \code{V_fin} to retrieve the vertexes (\code{igraph::V});
-#'  \item \code{vcount_fin} to count the vertexes (\code{igraph::vcount});
-#'  \item \code{gorder_fin} as an alias to \code{vcount_fin} (\code{igraph::gorder});
-#'  \item \code{E_fin} to retrieve the edges (\code{igraph::E});
-#'  \item \code{gsize_fin} to count the edges (\code{igraph::gsize});
-#'  \item \code{ecount_fin} as an alias to \code{gsize_fin} (\code{igraph::ecount})
-#'  \item \code{plot_igraph_fin} to plot graphs (\code{igraph::plot.igraph}))
+#'  \item \code{V} to retrieve the vertexes (\code{igraph::V});
+#'  \item \code{vcount} to count the vertexes (\code{igraph::vcount});
+#'  \item \code{gorder} as an alias to \code{vcount_fin} (\code{igraph::gorder});
+#'  \item \code{E} to retrieve the edges (\code{igraph::E});
+#'  \item \code{gsize} to count the edges (\code{igraph::gsize});
+#'  \item \code{ecount} as an alias to \code{gsize_fin} (\code{igraph::ecount})
+#'  \item \code{plot_igraph} to plot graphs (\code{igraph::plot.igraph}))
 #' }
 #'
 #' @param x The \code{igraph_financial} object
 #' @param ... Other parameters passed to the corresponding \code{igraph} functions (see Details).
 #'
-#' @returns The same result for both \code{igraph} and {igraph_financial} objects
+#' @returns The same result for both \code{igraph} and \code{igraph_financial} objects
 #' \itemize{
 #'  \item \code{V}: A vertex sequence containing all vertices, in the order of their numeric vertex ids.
 #'  \item \code{vcount} and \code{gorder}: Number of vertices, numeric scalar.
@@ -157,7 +157,7 @@ plot_igraph <- function(x, ...)UseMethod('plot_igraph')
 #'
 #' @author \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 #'
-#' @returns The same result for both \code{igraph} and {igraph_financial} objects
+#' @returns The same result for both \code{igraph} and \code{igraph_financial} objects
 #' \itemize{
 #'  \item \code{V}: A vertex sequence containing all vertices, in the order of their numeric vertex ids
 #'  \item \code{vcount} and \code{gorder}: Number of vertices, numeric scalar
@@ -240,7 +240,7 @@ setMethod(f = 'gorder', signature = 'igraph',
 #' @param x The \code{igraph_financial} object
 #' @param ... Other parameters passed to the corresponding method and/or \code{igraph} functions (see Details).
 #'
-#' @returns The same result for both \code{igraph} and {igraph_financial} objects
+#' @returns The same result for both \code{igraph} and \code{igraph_financial} objects
 #' \itemize{
 #'  \item \code{E}: An edge sequence of the graph
 #'  \item \code{ecount} and \code{gsize}: Number of edges, numeric scalar
@@ -320,12 +320,12 @@ setMethod(f = 'gsize', signature = 'igraph',
 
 #' igraph plotting for \code{igraph_financial} objects
 #'
-#' Methods to extend code{igraph}'s plotting functions to \code{igraph_financial} objects
+#' Methods to extend \code{igraph}'s plotting functions to \code{igraph_financial} objects
 #'
 #' @param x The \code{igraph_financial} object
 #' @param ... Other parameters passed to the corresponding method and/or \code{igraph} functions (see Details).
 #'
-#' @returns For both \code{igraph} and {igraph_financial} objects, returns NULL invisibly. It is called to print the graph to any R device. (see method and \href{https://rdrr.io/cran/igraph/man/plot.igraph.html}{igraph::plot.igraph})
+#' @returns For both \code{igraph} and \code{igraph_financial} objects, returns NULL invisibly. It is called to print the graph to any R device. (see method and \href{https://rdrr.io/cran/igraph/man/plot.igraph.html}{igraph::plot.igraph})
 #'
 #' @author \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 #'

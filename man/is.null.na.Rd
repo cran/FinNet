@@ -19,7 +19,7 @@ Logical, depending on \code{negating}:
 }
 }
 \description{
-Combines \code{base::is.na}, \code{base::is.null}
+Combines \code{base::is.na(x)}, \code{base::is.null(x)}. When \code{negating} is \code{TRUE}, it integrates also \code{f(x)|> magrittr::not()}.
 }
 \author{
 \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}

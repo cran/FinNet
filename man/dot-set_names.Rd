@@ -12,9 +12,11 @@
 \item{names}{New names}
 
 \item{where}{What to change:
-- \code{col} Column names
-- \code{row} Row names
-- \code{names} Names attribute}
+\itemize{
+ \item{\code{col} - Column names}
+ \item{\code{row} - Row names}
+ \item{\code{names} - Names attribute}
+}}
 }
 \value{
 The original object, with new names

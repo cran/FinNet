@@ -44,10 +44,21 @@ The ties' value will be: \eqn{1} if there is at least one common manager or owne
 data('firms_BKB')
 FF <- FF.binary.both(firms_BKB)
 
+
 }
 \seealso{
-\link{FF} \link{FF.naive.both} \link{FF.norm.both}
+Other Financial_matrix builders: 
+\code{\link{FF}()},
+\code{\link{FF.binary.management}()},
+\code{\link{FF.binary.ownership}()},
+\code{\link{FF.naive.both}()},
+\code{\link{FF.naive.management}()},
+\code{\link{FF.naive.ownership}()},
+\code{\link{FF.norm.both}()},
+\code{\link{FF.norm.management}()},
+\code{\link{FF.norm.ownership}()}
 }
 \author{
 \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
 }
+\concept{Financial_matrix builders}

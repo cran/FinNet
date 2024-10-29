@@ -13,7 +13,7 @@ is.neither.null.nor.na(x)
 Logical: \code{TRUE} if \code{x} is neither \code{NA} or \code{NULL}, \code{FALSE} otherwise.
 }
 \description{
-Combines \code{base::is.na()|> magrittr::not()} and \code{base::is.null|> magrittr::not()}
+Combines \code{base::is.na(x)|> magrittr::not()} and \code{base::is.null(x)|> magrittr::not()}.
 }
 \author{
 \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}

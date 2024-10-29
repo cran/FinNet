@@ -16,7 +16,7 @@ A vector of strings matching the provided objects' symbols.
 This function will not work when called inside the function to which the objects were explicitly passsed as \code{...}.
 }
 \references{
-https://stackoverflow.com/a/11892680
+\url{https://stackoverflow.com/a/11892680}
 }
 \author{
 \enc{Telarico, Fabio Ashtar}{Fabio Ashtar Telarico}
