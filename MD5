@@ -1,4 +1,4 @@
-693ad55a27f37a236dfa40f0a14cc911 *DESCRIPTION
+a5716b989059db5f6a7d5cb434728f49 *DESCRIPTION
 b7fb209e1285fc6c46da4f6564eb2f81 *NAMESPACE
 1fb2921649c8deb9b3de02179de115ec *R/00.data.R
 c471818b4fbad201832ebb6e39f60a46 *R/00.helpers.R
@@ -20,7 +20,7 @@ ccc81c1adc34ca752c7aa29287f09188 *R/01.firm_register.R
 9ebdcc9ca82604fba00e00ea70fa2d5c *R/06.2.Efficiency.R
 b795189c2252d7da79bf334fbd5cce90 *R/06.3.cfa.R
 d473f18b51c63ac852c1fe41083eeedc *R/FinNet-package.R
-4a077acf3a1985fe220205c4018cb4fd *R/RcppExports.R
+b954d914c82306451875f325e3ffee8d *R/RcppExports.R
 6220445c08cea30ff800359ed3aa2f21 *R/sysdata.rda
 aa5e5a2cbfaea3d9b6cdbe378ac48cee *build/partial.rdb
 09d0c6beae7d5e257e640d6fc8b7931d *build/vignette.rds
@@ -28,13 +28,13 @@ aa5e5a2cbfaea3d9b6cdbe378ac48cee *build/partial.rdb
 88b11207d18b8d5c9cb41e932eb57891 *data/firms_US.rda
 70bb3d4464a5139f16e45e7d07cffd37 *inst/doc/analysis_examples.R
 fe51c9138f2e4debd0b6454b5b91ce1e *inst/doc/analysis_examples.Rmd
-639cb0dd949c150e1d7d6656c29f2b47 *inst/doc/analysis_examples.html
+852e6e50f044e86363836aae78ea79cb *inst/doc/analysis_examples.html
 0a7464e287cd0731a7ada852c787308c *inst/doc/workflow-igraph_financial.R
 cdab486a9ffa9c9b3a59008bf9a19ef5 *inst/doc/workflow-igraph_financial.Rmd
-dc7f29f31dc11b43629f6bd5d0e9063f *inst/doc/workflow-igraph_financial.html
+cfc3c975dc9a5d7bb6227748fc6e8b9a *inst/doc/workflow-igraph_financial.html
 5f01916d245b98c759293091022ddaf1 *inst/doc/workflow-network_financial.R
 790c41aa9d4f75fa49ccd096f12650ae *inst/doc/workflow-network_financial.Rmd
-b9f49f1ce3e468c6e3723acc44c94cf2 *inst/doc/workflow-network_financial.html
+3e991aae6d5835867f8215aa0a853f27 *inst/doc/workflow-network_financial.html
 9d92e68d613916153da00616527cf769 *man/FF-basic-methods.Rd
 a738e1e7e9466a1555f5e161d8267f47 *man/FF-comparison-methods.Rd
 38ef2c4dec94670faf17a227526d2e26 *man/FF-math-methods.Rd
@@ -122,7 +122,7 @@ b9b44b719761e4fea4a82eb968b5f127 *man/show-network_financial-method.Rd
 9898657b9d7d510527d6d7f8d29187e1 *man/show_network_financial.Rd
 89bb2da1bb6f7f039c436c1dbf088708 *man/subset_financial_matrix.Rd
 0e6a18fe06f206bfa05f3ad6db742d7f *src/RcppExports.cpp
-699bdc7212fec97dfc659913ebbbc16c *src/SCC2.cpp
+196e3148a793e43c774fec24a2628646 *src/SCC2.cpp
 fe51c9138f2e4debd0b6454b5b91ce1e *vignettes/analysis_examples.Rmd
 cdab486a9ffa9c9b3a59008bf9a19ef5 *vignettes/workflow-igraph_financial.Rmd
 790c41aa9d4f75fa49ccd096f12650ae *vignettes/workflow-network_financial.Rmd

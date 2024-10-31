@@ -1,7 +1,7 @@
 Package: FinNet
 Type: Package
 Title: Quickly Build and Manipulate Financial Networks
-Version: 0.2
+Version: 0.2.1
 Authors@R: 
     person('Fabio Ashtar', 'Telarico', email = 'Fabio-Ashtar.Telarico@fdv.uni-lj.si',
                   role = c('aut','cre'), comment = c(ORCID = '0000-0002-8740-7078'))
@@ -24,6 +24,6 @@ LazyData: no
 VignetteBuilder: knitr
 LinkingTo: Rcpp
 NeedsCompilation: yes
-Packaged: 2024-10-29 09:05:48 UTC; fabio
+Packaged: 2024-10-31 10:36:37 UTC; fabio
 Repository: CRAN
-Date/Publication: 2024-10-29 09:20:02 UTC
+Date/Publication: 2024-10-31 15:30:02 UTC
